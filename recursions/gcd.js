@@ -6,11 +6,11 @@
  */
 function gcd(a, b) {
     // ваш код здесь
-    const arr1 = dividers(a);
-    const arr2 = dividers(b);
+    const arr1 = doDividers(a);
+    const arr2 = doDividers(b);
     let maxDivider;
 
-    function dividers(num) {
+    function doDividers(num) {
         let arr = [];
 
         for (let i = 1; i <= num; i++) {
