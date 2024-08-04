@@ -6,16 +6,19 @@
  */
 function gcd(a, b) {
     // ваш код здесь
-    const arr1 = [];
-    const arr2 = [];
+    const arr1 = dividers(a);
+    const arr2 = dividers(b);
     let maxDivider;
 
-    for (let i = 1; i <= a; i++) {
-        if (Number.isInteger(a / i)) arr1.push(i);
-    };
-    for (let i = 1; i <= b; i++) {
-        if (Number.isInteger(b / i)) arr2.push(i);
-    };
+    function dividers(num) {
+        let arr = [];
+
+        for (let i = 1; i <= num; i++) {
+            if (Number.isInteger(num / i)) arr.push(i);
+        };
+
+        return arr;
+    }
 
     if (arr1.length > arr2.length) {
         arr2.forEach((num) => {
