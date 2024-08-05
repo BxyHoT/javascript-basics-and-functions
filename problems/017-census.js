@@ -25,10 +25,7 @@ function census(list) {
     if (list2[0].gender === 'Male') person = list2[0];
     else return;
 
-    list.find((human, index) => {
-        if (person.age === human.age && person.gender === human.gender) num = index;
-    })
-
+    num = list.indexOf(person);
 
     return num + 1;
 }
